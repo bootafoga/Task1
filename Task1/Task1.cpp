@@ -6,8 +6,7 @@ using namespace std;
 
 int main()
 {
-	cout << "Max is: " << maxOf(5, 4) << endl;
-	
+	cout << "Hello" << endl;
 
 	return 0;
 
