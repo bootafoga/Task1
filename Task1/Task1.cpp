@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	cout << "Hello" << endl;
-	//now i'm trying to connect two device
+	//now i'm trying to check notes
 	return 0;
 
 }
