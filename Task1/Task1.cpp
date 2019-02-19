@@ -1,13 +1,18 @@
 #include "pch.h"
 #include <iostream>
-#include "function.h"
+#include "Array.h"
+#include "List.h"
 using namespace std;
 
 
 int main()
 {
-	cout << "Hello" << endl;
-	//now i'm trying to check notes
+
+	List<int> lst;
+	cout << lst.getSize() << endl;
+
+	// VISUAL STUDIO MAKE ME CRY	 
+
 	return 0;
 
 }

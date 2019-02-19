@@ -1,17 +1,6 @@
 #include "pch.h"
 #include "List.h"
 
-template <typename T>
-List<T>::List()
-{
-	sizeOfList = 0;
-	head = nullptr;
-}
-
-template <typename T>
-List<T>::~List()
-{
-}
 
 template<typename T>
 void List<T>::push_back(T field)
@@ -100,7 +89,7 @@ void List<T>::insert(T field, int index) //add by index before
 			itemSearch = itemSearch->nextNode;
 			currentIndex++;
 		}
-		if (currentIndex+1 == index) {
+		if (currentIndex + 1 == index) {
 			Node<T> *newItem = new Node<T>(field);
 			newItem->nextNode = itemSearch->nextNode;
 			itemSearch->nextNode = newItem;
@@ -108,7 +97,7 @@ void List<T>::insert(T field, int index) //add by index before
 
 		}
 	}
-	
+
 
 }
 
@@ -133,7 +122,7 @@ void List<T>::remove(int index)
 	else {
 		Node<T> *itemSearch = this->head;
 		int currentIndex = 0;
-		while (currentIndex+1 != index && itemSearch->nextNode != nullptr) {
+		while (currentIndex + 1 != index && itemSearch->nextNode != nullptr) {
 			itemSearch = itemSearch->nextNode;
 			currentIndex++;
 		}
@@ -158,6 +147,17 @@ void List<T>::set(T field, int index)
 	if (currentIndex == index) itemSearch->field = field;
 }
 
+
+template<class T> ostream &operator<<(ostream &out, List<T> list)
+{
+	int currentIndex = 0;
+	while (currentIndex < list.getSize()) {
+		out << " {" << list.At(currentIndex) << "} ";
+	}
+
+	return out;
+}
+
 /*template<typename T>
 T & List<T>::operator[](const int index)
 {
@@ -169,6 +169,6 @@ T & List<T>::operator[](const int index)
 		itemSearch = itemSearch->nextNode;
 		currentIndex++;
 	}
-	
+
 	if (currentIndex == index) return itemSearch->field;
 }*/
