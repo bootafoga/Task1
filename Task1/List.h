@@ -1,15 +1,26 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 template <typename T>
 class List{
-
 public:
 	List();
 	~List();
 
 	void push_back(T field);
-	T& operator[](const int index); //i have to convert access to an element throught a method,
-									//not a standart operator
+	void push_front(T field);
+	void pop_back();
+	void pop_front();
+	void insert(T field, int index);
+	T At(int index);
+	void remove(int index);
+	int getSize() {
+		return sizeOfList;
+	}
+	void set(T field, int index);
+	bool isEmpty() { return (sizeOfList == 0) }
+	friend ostream& operator<< (ostream &out, List<T> list);
 
 private:
 
@@ -28,3 +39,12 @@ private:
 	int sizeOfList;
 };
 
+template<class T> ostream &operator<<(ostream &out, List<T> list)
+{
+	Node<T> *currentItem = this->head;
+	while (lastItemSearch->nextNode != nullptr) {
+		out << " {" << currentItem->field << "} ";
+	}
+
+	return out;
+}
