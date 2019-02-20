@@ -1,18 +1,20 @@
 #include "pch.h"
 #include <iostream>
-#include "Array.h"
 #include "List.h"
 using namespace std;
 
 
 int main()
 {
-
 	List<int> lst;
-	cout << lst.getSize() << endl;
-
-	// VISUAL STUDIO MAKE ME CRY	 
+	
+	lst.push_back(1);
+	lst.push_back(2);
+	lst.push_back(3);
+	lst.push_back(4);
+	lst.push_back(5);
+	
+	cout << lst; 
 
 	return 0;
-
 }
