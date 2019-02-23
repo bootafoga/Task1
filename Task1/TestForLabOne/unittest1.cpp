@@ -54,24 +54,4 @@ public:
 
 	}
 
-	TEST_METHOD(CorrectIndex_PushFront)
-	{
-		lst.push_front(1);
-		lst.push_front(2);
-		lst.push_front(3);
-		Assert::AreEqual(lst.At(1), 2);
-	}
-
-	TEST_METHOD(IncorrectIndex_PushFront)
-	{
-		try {
-			lst.At(-1);
-		}
-		catch (std::out_of_range exp) {
-			Assert::AreEqual("Index must be >= 0", exp.what());
-		}
-
-	}
-
-
 };
