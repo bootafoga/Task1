@@ -153,8 +153,8 @@ void List<T>::insert(T field, int index)
 template<typename T>
 T List<T>::At(int index)
 {
-	if (index < 0) throw invalid_argument("Index must be >= 0");
-	if (index > sizeOfList) throw invalid_argument("Index is larger than size of list");
+	if (index < 0) throw out_of_range("Index must be >= 0");
+	if (index > sizeOfList) throw out_of_range("Index is larger than size of list");
 
 	Node<T> *itemSearch = this->head;
 	int currentIndex = 0;

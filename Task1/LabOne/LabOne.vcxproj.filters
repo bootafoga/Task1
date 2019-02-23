@@ -18,9 +18,6 @@
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="function.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="List.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -29,7 +26,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Task1.cpp">
+    <ClCompile Include="LabOne.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="List.cpp">
